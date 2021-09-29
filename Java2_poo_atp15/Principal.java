@@ -16,8 +16,8 @@ public class Principal {
         p2.sobrenome = "Bittencourt";
         p2.idade = 35;
 
-        mensagem(p1.nome, p1.sobrenome, p1.idade);
-        mensagem(p2.nome, p2.sobrenome, p2.idade);
+        mensagem("A primeira pessoa é: " + p1.nome, p1.sobrenome, p1.idade);
+        mensagem("A segunda pessoa é: " + p2.nome, p2.sobrenome, p2.idade);
         
     }
     static void cabecalho(){
@@ -25,6 +25,6 @@ public class Principal {
     }
 
     static void mensagem(String nome, String sobrenome, int idade){
-        System.out.printf("\n %s %s %d", nome, sobrenome, idade);
+        System.out.printf("\n%s %s %d anos.", nome, sobrenome, idade);
     }
 }
