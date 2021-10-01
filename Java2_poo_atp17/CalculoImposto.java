@@ -2,9 +2,9 @@ package Java2_poo_atp17;
 
 public class CalculoImposto {
 
-    private double taxaIss = 5.0;
-    private double taxaIof = 4.08;
-    private double taxaIr = 7.5;
+    private double taxaIss = 0.05;
+    private double taxaIof = 0.408;
+    private double taxaIr = 0.075;
     
     public double calculoIss(double salario) {
         double resultadoIss = salario * taxaIss;
