@@ -6,11 +6,13 @@ public class Calculadora {
         cabecalho();
 
         CalculoImposto cc1 = new CalculoImposto();
-        cc1.calculoIss(1800.00);
-        cc1.calculoIof(1800.00);
-        cc1.calculoIr(1800.00);
+        double taxaIss = cc1.calculoIss(1800.00);
+        double taxaIof = cc1.calculoIof(1800.00);
+        double taxaIr = cc1.calculoIr(1800.00);
         
-        System.out.println("\n O valor ");
+        System.out.printf("\nO valor do ISS que será descontado é de: R$ %.2f ", taxaIss);
+        System.out.printf("\nO valor do IOF que será descontado é de: R$ %.2f ", taxaIof);
+        System.out.printf("\nO valor do IR que será descontado é de: R$ %.2f ", taxaIr);
     }
 
     static void cabecalho() {
