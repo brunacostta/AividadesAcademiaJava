@@ -15,6 +15,9 @@ public class Numeros {
         numeros[8] = 90;
         numeros[9] = 100;
 
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println(numeros[i]);            
+        }
 
     }
     
