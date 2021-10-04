@@ -51,10 +51,10 @@ public class CadastroPessoas {
         pessoa[4] = p5;
 
         for (PessoaFisica pessoaFisica : pessoa) {
-            System.out.printf("\nCódigo: %d \nNome: %s \nSobrenome %s \nIdade: %d \nRG: %s \nCPF: %s \n", pessoaFisica.getCodigo(), pessoaFisica.getNome(),
-            pessoaFisica.getSobrenome(), pessoaFisica.getIdade(), pessoaFisica.getRg(), pessoaFisica.getCpf());            
+            System.out.printf("\nCódigo: %d \nNome: %s \nSobrenome %s \nIdade: %d \nRG: %s \nCPF: %s \n", 
+            pessoaFisica.getCodigo(), pessoaFisica.getNome(), pessoaFisica.getSobrenome(), 
+            pessoaFisica.getIdade(), pessoaFisica.getRg(), pessoaFisica.getCpf());            
         }
-
     }
     
 }
