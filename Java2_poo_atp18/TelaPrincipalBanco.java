@@ -6,16 +6,16 @@ public class TelaPrincipalBanco {
         ContaCorrente cc1 = new ContaCorrente();
 
         cc1.setCodigo_cliente(20);
-        System.out.println(cc1.getCodigo_cliente());
+        System.out.printf("\nO código do cliente é: %d ", cc1.getCodigo_cliente());
 
         cc1.setAgencia("Ilhabela");
-        System.out.println(cc1.getAgencia());
+        System.out.printf("\nA agência do cliente fica em: %s ", cc1.getAgencia());
 
         cc1.setNumero(1204);
-        System.out.println(cc1.getNumero());
+        System.out.printf("\nO número da agência é: %d ", cc1.getNumero());
 
         cc1.setSaldo(9623.81);
-        System.out.println(cc1.getSaldo());
+        System.out.printf("\nO saldo do cliente é de: R$ %.2f ", cc1.getSaldo());
     }
     
 }
