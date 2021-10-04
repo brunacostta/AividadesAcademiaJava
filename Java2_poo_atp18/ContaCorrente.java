@@ -2,16 +2,16 @@ package Java2_poo_atp18;
 
 public class ContaCorrente {
 
-    private int agencia;
+    private String agencia;
     private int numero;
     private int codigo_cliente;
     private double saldo;
 
-    public void setAgencia(int agencia) {
+    public void setAgencia(String agencia) {
         this.agencia = agencia;
     }
 
-    public int getAgencia() {
+    public String getAgencia() {
         return agencia;
     }
 
