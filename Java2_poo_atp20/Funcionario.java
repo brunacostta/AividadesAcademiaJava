@@ -1,7 +1,7 @@
 package Java2_poo_atp20;
 
-public class Funcionario {
+public class Funcionario extends Pessoa{
 
-    double salario;
-    String departamento;    
+    private double salario;
+    private String departamento;    
 }

@@ -1,8 +1,8 @@
 package Java2_poo_atp20;
 
-public class Coordenador {
+public class Coordenador extends Funcionario{
 
-    String curso_coordenado;
-    double bonus;
+    private String curso_coordenado;
+    private double bonus;
     
 }
