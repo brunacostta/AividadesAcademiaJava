@@ -28,7 +28,6 @@ public class Teste {
         System.out.printf("\n== Conta == \nCódigo Cliente: %d \nSaldo Conta: R$ %.2f \nSaldo Atualizado após transferencia: R$ %.2f \n", c1.getCodigo_cliente(), saldo,  c1.getSaldo());
         System.out.printf("\n== Conta == \nCódigo Cliente: %d \nSaldo Conta: R$ %.2f \nSaldo Atualizado após transferencia: R$ %.2f \n", cc1.getCodigo_cliente(), saldo_cc1,  cc1.getSaldo());
            
-    
     }
     
 }
