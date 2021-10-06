@@ -12,7 +12,7 @@ public class ContaCorrente extends Conta{
         double saldo_atualizado = this.getSaldo() - taxa_transferencia;
         this.setSaldo(saldo_atualizado);
 
-        if (numero_transferencia %5==0){
+        if (numero_transferencia %5==1){
             double saldoFinal = saldo_atualizado - taxa_manutencao;
             setSaldo(saldoFinal);
         }
