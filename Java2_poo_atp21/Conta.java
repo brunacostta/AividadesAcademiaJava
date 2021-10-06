@@ -20,5 +20,9 @@ public class Conta {
     public int getCodigo_cliente() {
         return codigo_cliente;
     }
+
+    public void transferencia(double valor_transfer) {
+        saldo -= valor_transfer;                
+    }
     
 }
