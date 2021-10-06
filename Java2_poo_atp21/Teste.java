@@ -6,12 +6,17 @@ public class Teste {
         Conta c1 = new Conta();
         c1.setCodigo_cliente(12);
         c1.setSaldo(8000.00);
+        double saldo = c1.getSaldo();
         c1.transferencia(200.00);
 
         ContaCorrente cc1 = new ContaCorrente();
-        cc1.setCodigo_cliente(12);
+        cc1.setCodigo_cliente(24);
         cc1.setSaldo(12000.00);
+        double saldo_cc = cc1.getSaldo();
         cc1.transferencia_realizada(2000.00);
+
+        System.out.printf("\n== Conta == \nCódigo Cliente: %d \nSaldo Conta: R$ %.2f \nSaldo Atualizado após transferencia: R$ %.2f \n", c1.getCodigo_cliente(), saldo,  c1.getSaldo());
+        System.out.printf("\n== Conta == \nCódigo Cliente: %d \nSaldo Conta: R$ %.2f \nSaldo Atualizado após transferencia: R$ %.2f \n", cc1.getCodigo_cliente(), saldo_cc,  cc1.getSaldo());
     }
     
 }
