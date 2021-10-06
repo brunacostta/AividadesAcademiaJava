@@ -24,5 +24,4 @@ public class Conta {
     public void transferencia(double valor_transfer) {
         saldo -= valor_transfer;                
     }
-    
 }
