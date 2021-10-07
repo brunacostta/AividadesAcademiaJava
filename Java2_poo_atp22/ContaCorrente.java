@@ -2,7 +2,7 @@ package Java2_poo_atp22;
 
 public class ContaCorrente {
     private double saldo;
-    private double taxa_saque = 5.0;
+    private double taxa_saque = 5.00;
     private int codigo_cliente;
     
     public ContaCorrente(double saldo, int codigo_cliente) {
@@ -23,7 +23,7 @@ public class ContaCorrente {
 
     @Override
     public String toString() {
-        String mensagem = this.saldo + "\n" + this.codigo_cliente + "\n" + this.taxa_saque;
+        String mensagem = "Saldo Conta Corrente: R$ " + this.saldo + "\n" + "Código Cliente: " + this.codigo_cliente + "\n" + "Valor taxa saque: R$ " + this.taxa_saque;
         return mensagem;
     }
 }
