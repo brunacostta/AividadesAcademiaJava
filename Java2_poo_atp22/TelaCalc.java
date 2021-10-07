@@ -11,7 +11,7 @@ public class TelaCalc {
         float result3 = calculo.soma(897.96f, 1263f, 10.65f);
         long result4 = calculo.soma(856, 157, 9);
 
-        System.out.printf("\nInt: %d \nDouble: %f \nFloat: %f \nLong: %d ", result1, result2, result3, result4);
+        System.out.printf("Int: %d \nDouble: %f \nFloat: %f \nLong: %d ", result1, result2, result3, result4);
     }
 
     static void cabecalho() {
