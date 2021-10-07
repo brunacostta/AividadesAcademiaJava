@@ -5,6 +5,12 @@ public class Aluno {
     private int idade;
     private int matricula;
 
+    
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     public void setNome_completo(String nome_completo) {
         this.nome_completo = nome_completo;
     }
@@ -28,5 +34,5 @@ public class Aluno {
     public int getMatricula() {
         return matricula;
     }
-    
+   
 }
