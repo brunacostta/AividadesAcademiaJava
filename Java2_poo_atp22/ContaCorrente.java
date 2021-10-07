@@ -17,7 +17,13 @@ public class ContaCorrente {
     }
 
     public double deposito(double deposito) {
-        double saldo_deposito = deposito + this.saldo;
+        double saldo_deposito= this.saldo += deposito;
         return saldo_deposito;        
+    }
+
+    @Override
+    public String toString() {
+        String mensagem = this.saldo + "\n" + this.codigo_cliente + "\n" + this.taxa_saque;
+        return mensagem;
     }
 }
