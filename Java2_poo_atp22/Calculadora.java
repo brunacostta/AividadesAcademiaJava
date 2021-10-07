@@ -12,4 +12,8 @@ public class Calculadora {
     public float soma(float f1, float f2, float f3) {
         return f1 + f2 + f3;
     }
+
+    public long soma(long l1, long l2, long l3) {
+        return l1 + l2 + l3;
+    }
 }
