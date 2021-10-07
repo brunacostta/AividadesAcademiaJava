@@ -5,8 +5,6 @@ public class Aluno {
     private int idade;
     private int matricula;
 
-    
-    
     public void setNome_completo(String nome_completo) {
         this.nome_completo = nome_completo;
     }
