@@ -17,8 +17,8 @@ public class ContaCorrente {
     }
 
     public double deposito(double deposito) {
-        double saldo_deposito= this.saldo += deposito;
-        return saldo_deposito;        
+        this.saldo += deposito;
+        return deposito;        
     }
 
     @Override
