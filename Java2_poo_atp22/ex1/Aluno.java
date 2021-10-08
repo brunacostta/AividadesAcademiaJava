@@ -1,4 +1,4 @@
-package Java2_poo_atp22;
+package Java2_poo_atp22.ex1;
 
 public class Aluno {
     private String nome_completo;

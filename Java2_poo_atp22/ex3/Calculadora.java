@@ -1,4 +1,4 @@
-package Java2_poo_atp22;
+package Java2_poo_atp22.ex3;
 
 public class Calculadora {
     public int soma(int s1, int s2) {

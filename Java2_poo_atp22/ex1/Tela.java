@@ -1,4 +1,4 @@
-package Java2_poo_atp22;
+package Java2_poo_atp22.ex1;
 
 public class Tela {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Java2_poo_atp22;
+package Java2_poo_atp22.ex2;
 
 public class ContaCorrente {
     private double saldo;
