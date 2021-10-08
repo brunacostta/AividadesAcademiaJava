@@ -23,7 +23,7 @@ public class ContaCorrente {
 
     @Override
     public String toString() {
-        String mensagem = "Saldo Conta Corrente: R$ " + this.saldo + "\n" + "Código Cliente: " + this.codigo_cliente + "\n" + "Valor taxa saque: R$ " + this.taxa_saque;
-        return mensagem;
+        return "Saldo Conta Corrente: R$ " + this.saldo + "\n" + "Código Cliente: " + this.codigo_cliente + 
+        "\n" + "Valor taxa saque: R$ " + this.taxa_saque;
     }
 }
