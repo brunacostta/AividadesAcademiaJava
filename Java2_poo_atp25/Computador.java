@@ -12,6 +12,6 @@ public class Computador {
     @Override
     public String toString() {
         return "\nMarca: " + this.marca + " || " + " Memória: " + this.memoria + " || " 
-        + " Processador: " + this.processador + " " + this.disco_rigido;
+        + " Processador: " + this.processador + " || " + " Disco Rigido: " + this.disco_rigido;
     }
 }
