@@ -11,7 +11,7 @@ public class Notebook extends Computador {
 // Crie uma sobrescrita do método toString nas três classes para imprimir todos os dados.
     @Override
     public String toString() {
-        return this.marca + " " + this.memoria + " " + this.processador + " " + this.disco_rigido 
-        + " " + this.bateria + " " + this.velocidade_wifi + " " + this.versão_bluetooth;
+        return "\nBateria: " + this.bateria + " || " + " Velocidade Wifi: " + this.velocidade_wifi + " || " 
+        + " Versão bluetooth: " + this.versão_bluetooth;
     }
 }

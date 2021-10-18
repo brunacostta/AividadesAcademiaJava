@@ -11,6 +11,7 @@ public class Computador {
 // Crie uma sobrescrita do método toString nas três classes para imprimir todos os dados.
     @Override
     public String toString() {
-        return this.marca + " " + this.memoria + " " + this.processador + " " + this.disco_rigido;
+        return "\nMarca: " + this.marca + " || " + " Memória: " + this.memoria + " || " 
+        + " Processador: " + this.processador + " " + this.disco_rigido;
     }
 }

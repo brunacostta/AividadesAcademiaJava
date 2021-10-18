@@ -11,7 +11,7 @@ public class Desktop extends Computador{
 // Crie uma sobrescrita do método toString nas três classes para imprimir todos os dados.
     @Override
     public String toString() {
-        return this.marca + " " + this.memoria + " " + this.processador + " " + this.disco_rigido 
-        + " " + this.tamanho_gabinete + " " + this.monitor_externo + " " + this.fonte;
+        return "\nTamanho Gabinete: " + this.tamanho_gabinete + " || " + " Monitor Externo: " 
+        + this.monitor_externo + " || " + " Fonte: " + this.fonte + "\n";
     }
 }
