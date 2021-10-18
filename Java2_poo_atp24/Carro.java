@@ -1,3 +1,4 @@
+// Crie uma classe carro com os atributos públicos: número de portas e capacidade do porta-malas
 package Java2_poo_atp24;
 
 public class Carro {
@@ -6,6 +7,7 @@ public class Carro {
     
     @Override
     public String toString() {
-        return "Numero de portas: " + this.numero_portas + " || " + " Capacidade porta-malas: " + this.capacidade_porta_malas;
+        return "Numero de portas: " + this.numero_portas + " || " 
+        + " Capacidade porta-malas: " + this.capacidade_porta_malas;
     }
 }
