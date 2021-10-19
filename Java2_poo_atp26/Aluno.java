@@ -10,18 +10,20 @@ public class Aluno extends Pessoa{
     //Crie uma sobrescrita do método equals nas duas classes para comparar os dados especificos de cada uma.
     @Override
     public boolean equals(Object obj) {
-        Aluno outro_aluno = (Aluno)obj;
+        if(obj instanceof Aluno) {
 
-        if (this.matricula.equals(outro_aluno.matricula) && this.turma.equals(outro_aluno.turma) && this.curso.equals(outro_aluno.curso)) {
-            return true;
-        } else {
-            return false;
+            Aluno outro_aluno = (Aluno)obj;
+    
+            if (this.matricula.equals(outro_aluno.matricula) && this.turma.equals(outro_aluno.turma) && this.curso.equals(outro_aluno.curso)) {
+                return true;
+            } 
         }
+        return false;
     }
 
     //Crie uma sobrescrita do método toString nas duas classes para imprimir todos os dados
     @Override
     public String toString() {
-        return "\nMatricula: " + this.matricula + " || " + "Turma: " + this.turma + " || " + "Curso: " + this.curso;
+        return "\nMatricula: " + this.matricula + " || " + "Turma: " + this.turma + " || " + "Curso: " + this.curso + "\n";
     }
 }

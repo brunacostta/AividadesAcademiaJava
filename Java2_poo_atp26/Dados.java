@@ -7,17 +7,17 @@ import java.rmi.server.ObjID;
 //Crie uma classe Dados com um atributo privado do tipo array de Object.
 public class Dados {
     private Object[] dados;
-    int posicao;
+    int posicao = 0;
     int tamanho = 5;
 
     //Crie uma inicialização do array para 5 posições dentro do do método construtor da classe
     public Dados() {
-       this.dados = new Object[5];
+       this.dados = new Object[tamanho];
     }
 
     //Crie um método para mostrar quantos elementos já foram adicionados ao array.
     public int size(){
-        return tamanho +1;
+        return posicao;
     }
 
     //Crie um método para adicionar elementos ao array e que permita receber tanto objetos da classe pessoa quanto objetos da classe Aluno. Caso o array já tenha todas as posições ocupadas, deve ser adicionado mais 5 posições ao array.
@@ -30,13 +30,13 @@ public class Dados {
         } else {
             tamanho = tamanho * 2;
             Object[] dados2 = new Object[tamanho];
-
-            for (int i = 0; i < dados2.length; i++) {
+            
+            for (int i = 0; i < dados.length; i++) {
                 dados2[i] = dados[i];
             }
             dados = dados2;
         }
-    mensagem = "Linha adicionada";
+    mensagem = "Aluno adicionado!";
     return mensagem;
     }
 
@@ -44,22 +44,22 @@ public class Dados {
     public String remove(Object obj){
         for (int i = 0; i < dados.length; i++) {
             if( dados[i].equals(obj)){
-            reorganiza(i);
+            organiza(i);
             posicao --;
-            return "removido com sucesso";
+            return "Aluno removido com sucesso";
             }
         }
-        return "Não encontrado";
+        return "Aluno não encontrado";
     }
 
-    public void reorganiza(int posicao){
-    for (int i = posicao; i < dados.length; i++) {
-        this.dados[i] = this.dados[i+1];
+    public void organiza(int posicao){
+        for (int i = posicao; i < dados.length; i++) {
+            this.dados[i] = this.dados[i+1];
         }
     }
 
     //Crie um método para verificar se um determinado objeto já foi salvo no array.
-    public boolean contains(Object obj){
+    public boolean verifica(Object obj){
         for (int i = 0; i < posicao; i++) {
             if(dados[i].equals(obj)){
                 return true;
