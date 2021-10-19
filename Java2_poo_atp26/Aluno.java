@@ -18,4 +18,10 @@ public class Aluno extends Pessoa{
             return false;
         }
     }
+
+    //Crie uma sobrescrita do método toString nas duas classes para imprimir todos os dados
+    @Override
+    public String toString() {
+        return "\nMatricula: " + this.matricula + " || " + "Turma: " + this.turma + " || " + "Curso: " + this.curso;
+    }
 }

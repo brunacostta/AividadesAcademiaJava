@@ -18,4 +18,10 @@ public class Pessoa {
             return false;
         }  
     }
+
+    //Crie uma sobrescrita do método toString nas duas classes para imprimir todos os dados.
+    @Override
+    public String toString() {
+        return "\nNome: " + this.nome + " " + this.sobrenome + " || " + " Idade: " + this.idade + " anos";
+    }
 }
