@@ -37,6 +37,7 @@ public class Main {
     System.out.println(dados.verifica(pessoa2));
     System.out.println(dados.verifica(aluno2));
 
+    //Tamanho da minha lista
     System.out.println(dados.size());
         
     System.out.println(pessoa);
@@ -44,6 +45,7 @@ public class Main {
     System.out.println(pessoa2);
     System.out.println(aluno2);
 
+    //Remova o aluno do array, utilizando o método da classe Dados.
     System.out.println(dados.remove(pessoa2));
         
     }
