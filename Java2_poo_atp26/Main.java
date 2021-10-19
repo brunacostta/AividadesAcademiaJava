@@ -36,6 +36,7 @@ public class Main {
     System.out.println(dados.verifica(aluno));
     System.out.println(dados.verifica(pessoa2));
     System.out.println(dados.verifica(aluno2));
+    
 
     //Tamanho da minha lista
     System.out.println(dados.size());
