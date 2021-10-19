@@ -28,22 +28,23 @@ public class Main {
 
     //Utilize o método de dados para verificar se a novo objeto ja esta salvo no array.
     //
+    
     System.out.println(dados.add(pessoa2));
     System.out.println(dados.add(aluno2));
    
-    System.out.println(dados.size());
-        
-    System.out.println(pessoa2);
-    System.out.println(aluno2);
-    System.out.println(pessoa2);
-    System.out.println(aluno2);
-
     System.out.println(dados.verifica(pessoa));
     System.out.println(dados.verifica(aluno));
     System.out.println(dados.verifica(pessoa2));
     System.out.println(dados.verifica(aluno2));
-    
-    //System.out.println(dados.remove(aluno2));
+
+    System.out.println(dados.size());
+        
+    System.out.println(pessoa);
+    System.out.println(aluno);
+    System.out.println(pessoa2);
+    System.out.println(aluno2);
+
+    System.out.println(dados.remove(pessoa2));
         
     }
 }

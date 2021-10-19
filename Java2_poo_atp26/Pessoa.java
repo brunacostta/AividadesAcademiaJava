@@ -11,7 +11,6 @@ public class Pessoa {
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Pessoa){
-
             Pessoa outra_pessoa = (Pessoa)obj;
           
             if (this.nome.equals(outra_pessoa.nome) && this.sobrenome.equals(outra_pessoa.sobrenome) && this.idade == outra_pessoa.idade) {

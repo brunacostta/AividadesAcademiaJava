@@ -2,8 +2,6 @@
 
 package Java2_poo_atp26;
 
-import java.rmi.server.ObjID;
-
 //Crie uma classe Dados com um atributo privado do tipo array de Object.
 public class Dados {
     private Object[] dados;
@@ -42,18 +40,18 @@ public class Dados {
 
     //Crie um método para remover um elemento do array.
     public String remove(Object obj){
-        for (int i = 0; i < dados.length; i++) {
-            if( dados[i].equals(obj)){
-            organiza(i);
-            posicao --;
-            return "Aluno removido com sucesso";
+        for (int i = 0; i < posicao; i++) {
+            if(dados[i].equals(obj)){
+                organiza(i);
+                posicao --;
+                return "Aluno removido!";
             }
         }
-        return "Aluno não encontrado";
+        return "Aluno não encontrado!";
     }
 
     public void organiza(int posicao){
-        for (int i = posicao; i < dados.length; i++) {
+        for (int i = posicao; i < posicao; i++) {
             this.dados[i] = this.dados[i+1];
         }
     }
