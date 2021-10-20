@@ -37,7 +37,6 @@ public class Main {
     aluno2.curso = "Analise e Desenvolvimento de Sistemas";
 
     //Utilize o método de dados para verificar se a novo objeto ja esta salvo no array.
-    //
     System.err.println(pessoa.equals(pessoa2));
 
     System.out.println(dados.add(pessoa2));
@@ -59,6 +58,8 @@ public class Main {
 
     //Remova o aluno do array, utilizando o método da classe Dados.
     System.out.println(dados.remove(pessoa2));
-    System.out.println(dados.size());  
+    System.out.println(dados.remove(aluno2));
+    System.out.println(dados.size()); 
+    
     }
 }
