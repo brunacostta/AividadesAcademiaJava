@@ -34,6 +34,7 @@ public class Main {
     for (Filmes f : filmeController.read()) {
     }
 
+    System.out.println("\n========================================================");
     System.out.println("========================================================");
 
     SeriesController serieController = new SeriesController();
@@ -46,7 +47,7 @@ public class Main {
     serieController.create(serie);
     for (Series s : serieController.read()) {
         System.out.printf("\nSérie criado com sucesso! %s\n", serie);
-        }
+    }
 
     Series serie2 = new Series();
     serie2.id = 2145;
@@ -60,6 +61,7 @@ public class Main {
     serieController.delete(serie2);
     for (Series s : serieController.read()) { 
     }
+
     }
    
 }
