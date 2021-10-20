@@ -59,6 +59,6 @@ public class Main {
 
     //Remova o aluno do array, utilizando o método da classe Dados.
     System.out.println(dados.remove(pessoa2));
-        
+    System.out.println(dados.size());  
     }
 }

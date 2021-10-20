@@ -5,8 +5,8 @@ package Java2_poo_atp26;
 //Crie uma classe Dados com um atributo privado do tipo array de Object.
 public class Dados {
     private Object[] dados;
-    int posicao = 0;
-    int tamanho = 5;
+    private int posicao = 0;
+    private int tamanho = 5;
 
     //Crie uma inicialização do array para 5 posições dentro do do método construtor da classe
     public Dados() {
@@ -22,8 +22,8 @@ public class Dados {
     public String add(Object obj) {
         String mensagem;
 
-        if (posicao < dados.length) {
-            dados[posicao] = obj;
+        if (posicao < this.dados.length) {
+            this.dados[posicao] = obj;
             posicao ++;
         } else {
             tamanho = tamanho * 2;
@@ -43,17 +43,17 @@ public class Dados {
         for (int i = 0; i < posicao; i++) {
             if(dados[i].equals(obj)){
                 organiza(i);
-                posicao --;
                 return "Aluno removido!";
             }
         }
         return "Aluno não encontrado!";
     }
-
-    public void organiza(int posicao){
-        for (int i = posicao; i < posicao; i++) {
+    
+    public void organiza(int pos){
+        for (int i = pos; i < posicao; i++) {
             this.dados[i] = this.dados[i+1];
         }
+        posicao --;
     }
 
     //Crie um método para verificar se um determinado objeto já foi salvo no array.
