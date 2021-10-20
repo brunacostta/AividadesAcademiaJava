@@ -13,7 +13,7 @@ public class Aluno extends Pessoa{
         if(obj instanceof Aluno) {
             Aluno outro_aluno = (Aluno)obj;
     
-            if (this.matricula.equals(outro_aluno.matricula) && this.turma.equals(outro_aluno.turma) && this.curso.equals(outro_aluno.curso)) {
+            if (this.matricula.equals(outro_aluno.matricula) && this.turma.equals(outro_aluno.turma) && this.curso.equals(outro_aluno.curso) && super.equals(outro_aluno)) {
                 return true;
             } 
         }
@@ -23,6 +23,6 @@ public class Aluno extends Pessoa{
     //Crie uma sobrescrita do método toString nas duas classes para imprimir todos os dados
     @Override
     public String toString() {
-        return "\nMatricula: " + this.matricula + " || " + "Turma: " + this.turma + " || " + "Curso: " + this.curso + "\n";
+        return super.toString() + " || " + "\nMatricula: " + this.matricula + " || " + "Turma: " + this.turma + " || " + "Curso: " + this.curso + "\n";
     }
 }

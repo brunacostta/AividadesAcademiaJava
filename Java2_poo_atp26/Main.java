@@ -10,6 +10,9 @@ public class Main {
     pessoa.idade = 23;
 
     Aluno aluno = new Aluno();  
+    aluno.nome = "Ana";
+    aluno.sobrenome = "Silva";
+    aluno.idade = 23;
     aluno.matricula = "RT89456";
     aluno.turma = "2DADS";
     aluno.curso = "Analise e Desenvolvimento de Sistemas";
@@ -21,14 +24,22 @@ public class Main {
 
     //Crie um novo objeto para Pessoa e atribua os mesmos dados da pessoa criada anteriormente.
     Pessoa pessoa2 = new Pessoa();
-    pessoa2 = pessoa;
+    pessoa2.nome = "Ana";
+    pessoa2.sobrenome = "Silva";
+    pessoa2.idade = 23;
 
-    Aluno aluno2 = new Aluno();  
-    aluno2 = aluno;
+    Aluno aluno2 = new Aluno();
+    aluno2.nome = "Ana";
+    aluno2.sobrenome = "Silva";
+    aluno2.idade = 23;  
+    aluno2.matricula = "RT89456";
+    aluno2.turma = "2DADS";
+    aluno2.curso = "Analise e Desenvolvimento de Sistemas";
 
     //Utilize o método de dados para verificar se a novo objeto ja esta salvo no array.
     //
-    
+    System.err.println(pessoa.equals(pessoa2));
+
     System.out.println(dados.add(pessoa2));
     System.out.println(dados.add(aluno2));
    
