@@ -6,6 +6,6 @@ public class PessoaFisica extends Pessoa{
     
     @Override
     public String toString() {
-        return "\nId: " + this.id + "\nNome: " + this.nome + "\nCPF: " + this.cpf + " | RG: " + this.rg + super.toString() + "\n";
+        return super.toString() + "\nCPF: " + this.cpf + " | RG: " + this.rg + "\n";
     }
 }

@@ -11,6 +11,6 @@ public class Endereco extends Base {
 
     @Override
     public String toString() {
-        return "\nLogradouro: " + this.logradouro + "\nEndereço: " + this.endereço +" "+ this.numero + "\nBairro: " + this.bairro + " | Cidade: " +this.cidade + " | Estado: " + this.estado;
+        return "\nLogradouro: " + this.logradouro + " " + this.endereço +" "+ this.numero + "\nBairro: " + this.bairro + " | Cidade: " +this.cidade + " | Estado: " + this.estado;
     }
 }

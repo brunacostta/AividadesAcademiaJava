@@ -23,6 +23,7 @@ public class Main {
         end_pf1.estado = "Ceara";
 
         pf1.enderecoResidencial = end_pf1;
+        pf1.enderecoComercial = end_pf1;
         
         pf.create(pf1);
         for (PessoaFisica pessoa : pf.read()) {
@@ -37,13 +38,14 @@ public class Main {
         pf2.rg = "89682441";
 
         Endereco end_pf2 = new Endereco();
-        end_pf2.logradouro = "Rua";
-        end_pf2.endereço = "Pirapora";
-        end_pf2.numero = "84";
-        end_pf2.bairro = "Vale";
+        end_pf2.logradouro = "Av";
+        end_pf2.endereço = "Pira";
+        end_pf2.numero = "60";
+        end_pf2.bairro = "Apoador";
         end_pf2.cidade = "Ribeirão";
-        end_pf2.estado = "São Paulo";
+        end_pf2.estado = "Rio de Janeiro";
 
+        pf2.enderecoResidencial = end_pf2;
         pf2.enderecoComercial = end_pf2;
 
         pf.update(pf2);

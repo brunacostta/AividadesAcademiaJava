@@ -8,6 +8,6 @@ public abstract class Pessoa extends Base{
       
     @Override
     public String toString() {
-        return "\n" + this.nome + this.enderecoResidencial + this.enderecoComercial;
+        return "\nId: " + this.id + "\nNome: " + this.nome + "\nEndereço Residencial" + this.enderecoResidencial + "\n" + "\nEndereço Comercial" + this.enderecoComercial;
    }
 }
