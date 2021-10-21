@@ -6,6 +6,6 @@ public class PessoaJuridica extends Pessoa{
 
     @Override
     public String toString() {
-        return "\nId: " + this.id + "\nNome: " + this.nome + "\nCNPJ: " + this.cnpj+ " | IE: " + this.ie + super.toString();
+        return super.toString() + "\nCNPJ: " + this.cnpj+ " | IE: " + this.ie;
     }
 }

@@ -1,8 +1,10 @@
 package Java2_poo_atp28.views;
 
+import Java2_poo_atp28.controllers.PJController;
 import Java2_poo_atp28.controllers.PessoaFisicaController;
 import Java2_poo_atp28.models.Endereco;
 import Java2_poo_atp28.models.PessoaFisica;
+import Java2_poo_atp28.models.PessoaJuridica;
 
 public class Main {
     public static void main(String[] args) {
@@ -60,5 +62,31 @@ public class Main {
 
         System.out.println("\n========================================================");
         System.out.println("========================================================");
+
+        PJController pj = new PJController();
+
+        PessoaJuridica pj1 = new PessoaJuridica();
+        pj1.id = 7485;
+        pj1.nome = "Ameli Comercial Limitada";
+        pj1.cnpj = "00541254/24145";
+        pj1.ie = 454589;
+
+        Endereco end_pj1 = new Endereco();
+        end_pj1.logradouro = "Rua";
+        end_pj1.endereço = "Azul";
+        end_pj1.numero = "11";
+        end_pj1.bairro = "Raio";
+        end_pj1.cidade = "Rio de Janeiro";
+        end_pj1.estado = "Acre";
+
+        pj1.enderecoResidencial = end_pj1;
+        pj1.enderecoComercial = end_pj1;
+        
+
+        pj.create(pj1);
+        for (PessoaJuridica juridica : pj.read()) {
+            System.out.printf("\nPessoa Juridica cadastrada! %s ", juridica
+            );
+        }
     }
 }
