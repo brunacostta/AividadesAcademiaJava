@@ -160,9 +160,7 @@ public class Main {
         int nm1 = 0;
         try {
             nm1 = Integer.parseInt(sc.nextLine());
-            if (nm1 == 0) {
-                throw new ArithmeticException("\n\t>>>>>>>>>>>>> O número não pode ser divisível por 0");
-            }
+            
             
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
@@ -170,12 +168,7 @@ public class Main {
             divisao(calc, sc);
             
         } 
-        catch(ArithmeticException ex){
-            System.out.println(ex.getMessage());
-            System.out.println("\n\t>>>>>>>>>>>>> Digite novamente: ");
-            nm1 = Integer.parseInt(sc.nextLine());
-        }
-        
+       
         System.out.print("\n\tDigite o segundo numero: ");
         int nm2 = 1;
         boolean validador = false;
@@ -184,10 +177,19 @@ public class Main {
             try {
                 nm2 = Integer.parseInt(sc.nextLine());
                 validador = true;
+                if (nm2 == 0) {
+                    throw new ArithmeticException("\n\t>>>>>>>>>>>>> O número não pode ser divisível por 0");
+                }
             } catch (NumberFormatException ex) {
                 System.out.println(ex.getMessage());
                 System.out.println("\n\tDigite um número inteiro!");         
             } 
+            catch(ArithmeticException ex){
+                System.out.println(ex.getMessage());
+                System.out.println("\n\t>>>>>>>>>>>>> Digite novamente: ");
+                nm2 = Integer.parseInt(sc.nextLine());
+            }
+            
         } while (validador != true);
 
         int outro = calc.divisao(nm1, nm2);
