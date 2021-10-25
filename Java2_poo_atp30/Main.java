@@ -7,6 +7,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Calculadora calc = new Calculadora();
 
+        cabecalho();
+
         int opcao;
         do {
             opcao = menu(sc);
@@ -34,25 +36,48 @@ public class Main {
 
     }
 
+    //O sistema deve possuir um tratamento de exceção durante a leitura dos dados para evitar que o usuário insira algo diferente de números inteiros tanto para as operação quanto para o menu.
+
+    static void cabecalho() {
+        System.out.println("\n\t>>>>>>>>>>>>>>>> Olá, Bem Vindo! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+        System.out.println("\t>>>>>>>>>>>>>>>> Calculadora com Exceção <<<<<<<<<<<<<<<<<<<<<<<");
+    }
+    
     private static int menu(Scanner sc) {
-        System.out.print("\n\t1-SOMA\n\t2-SUBTRAÇÃO\n\t3-MULTIPLICAÇÃO\n\t4-DIVISÃO\n\t0-Sair\n\n\tEscolha uma opção:");
-        int opcao = Integer.parseInt(sc.nextLine());
+        System.out.print("\n\t|1| SOMA \t|2| SUBTRAÇÃO \t|3| MULTIPLICAÇÃO \t|4| DIVISÃO \t|0| Sair \n\t>>>>>>>>> Escolha uma opção do menu acima: ");
+        int opcao = 0;
+        
+        try {
+            opcao = Integer.parseInt(sc.nextLine());
+            if (opcao < 0 || opcao > 5) {
+                throw new IllegalArgumentException("\n\t>>>>>>> Opção digitada não existe no menu!");
+             }
+                
+        } catch (NumberFormatException ex) {
+            System.out.println("\n\t>>>>>>>>>>> Digite um número inteiro.");
+            opcao = -1;
+    
+        }catch(IllegalArgumentException ex){
+            System.out.println(ex.getMessage());
+            }
+        
         return opcao;
     }
 
-    private static void soma(Calculadora n, Scanner sc){
+        private static void soma(Calculadora n, Scanner sc){
         Calculadora calc = new Calculadora();
-        System.out.print("Digite o primeiro numero: ");
+        System.out.print("\n\tDigite o primeiro numero: ");
         int nm1 = 0;
+
         try {
             nm1 = Integer.parseInt(sc.nextLine());
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
-            System.out.println("\nDigite um número inteiro!");
+            System.out.println("\n\tDigite um número inteiro!");
             soma(calc, sc);
         }
         
-        System.out.print("Digite o segundo numero: ");
+        System.out.print("\n\tDigite o segundo numero: ");
         int nm2 = 0;
         boolean validador = false;
 
@@ -62,27 +87,27 @@ public class Main {
                 validador = true;
             } catch (NumberFormatException ex) {
                 System.out.println(ex.getMessage());
-                System.out.println("\nDigite um número inteiro!");         
+                System.out.println("\n\tDigite um número inteiro!");         
             }
         } while (validador != true);
 
         int outro = calc.soma(nm1, nm2);
-        System.out.printf("\nA soma dos números é igual a: %s ", outro);
+        System.out.printf("\n\t<<<<< A soma dos números é igual a: %s >>>>>", outro);
     }
 
     private static void subtracao(Calculadora n, Scanner sc){
         Calculadora calc = new Calculadora();
-        System.out.print("Digite o primeiro numero: ");
+        System.out.print("\n\tDigite o primeiro numero: ");
         int nm1 = 0;
         try {
             nm1 = Integer.parseInt(sc.nextLine());
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
-            System.out.println("\nDigite um número inteiro!");
+            System.out.println("\n\tDigite um número inteiro!");
             soma(calc, sc);
         }
         
-        System.out.print("Digite o segundo numero: ");
+        System.out.print("\n\tDigite o segundo numero: ");
         int nm2 = 0;
         boolean validador = false;
 
@@ -92,27 +117,27 @@ public class Main {
                 validador = true;
             } catch (NumberFormatException ex) {
                 System.out.println(ex.getMessage());
-                System.out.println("\nDigite um número inteiro!");         
+                System.out.println("\n\tDigite um número inteiro!");         
             }
         } while (validador != true);
 
         int outro = calc.subtracao(nm1, nm2);
-        System.out.printf("\nA subtração dos números é igual a: %s ", outro);
+        System.out.printf("\n\t<<<<< A subtração dos números é igual a: %s >>>>>", outro);
     }
 
     private static void multiplicacao(Calculadora n, Scanner sc){
         Calculadora calc = new Calculadora();
-        System.out.print("Digite o primeiro numero: ");
+        System.out.print("\n\tDigite o primeiro numero: ");
         int nm1 = 0;
         try {
             nm1 = Integer.parseInt(sc.nextLine());
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
-            System.out.println("\nDigite um número inteiro!");
+            System.out.println("\n\tDigite um número inteiro!");
             soma(calc, sc);
         }
         
-        System.out.print("Digite o segundo numero: ");
+        System.out.print("\n\tDigite o segundo numero: ");
         int nm2 = 0;
         boolean validador = false;
 
@@ -122,12 +147,12 @@ public class Main {
                 validador = true;
             } catch (NumberFormatException ex) {
                 System.out.println(ex.getMessage());
-                System.out.println("\nDigite um número inteiro!");         
+                System.out.println("\n\tDigite um número inteiro!");         
             }
         } while (validador != true);
 
         int outro = calc.multiplicacao(nm1, nm2);
-        System.out.printf("\nA multiplicação dos números é igual a: %s ", outro);
+        System.out.printf("\n\t<<<<< A multiplicação dos números é igual a: %s >>>>>", outro);
     }
 
     private static void divisao(Calculadora n, Scanner sc){
@@ -138,11 +163,11 @@ public class Main {
             nm1 = Integer.parseInt(sc.nextLine());
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
-            System.out.println("\nDigite um número inteiro!");
+            System.out.println("\n\tDigite um número inteiro!");
             soma(calc, sc);
         }
         
-        System.out.print("Digite o segundo numero: ");
+        System.out.print("\n\tDigite o segundo numero: ");
         int nm2 = 0;
         boolean validador = false;
 
@@ -152,11 +177,11 @@ public class Main {
                 validador = true;
             } catch (NumberFormatException ex) {
                 System.out.println(ex.getMessage());
-                System.out.println("\nDigite um número inteiro!");         
+                System.out.println("\n\tDigite um número inteiro!");         
             }
         } while (validador != true);
 
         int outro = calc.divisao(nm1, nm2);
-        System.out.printf("\nA divisão dos números é igual a: %s ", outro);
+        System.out.printf("\n\t<<<<< A divisão dos números é igual a: %s >>>>>", outro);
     }
 }
