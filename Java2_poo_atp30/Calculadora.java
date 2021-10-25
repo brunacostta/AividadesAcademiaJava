@@ -5,19 +5,20 @@ public class Calculadora {
     public int n2;
 
     public int soma(int n1, int n2) {
-        return this.n1+ this.n2;
+         return n1 + n2;
     }
 
     public int subtracao(int n1, int n2) {
-        return this.n1+ this.n2;
+        return n1 - n2;
     }
 
     public int divisao(int n1, int n2) {
-        return this.n1+ this.n2;
+        return n1 / n2;
     }
 
     public int multiplicacao(int n1, int n2) {
-        return this.n1+ this.n2;
+        return n1 * n2;
     }
+        
 }
 
