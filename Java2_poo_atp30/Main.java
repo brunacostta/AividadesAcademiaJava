@@ -104,7 +104,7 @@ public class Main {
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
             System.out.println("\n\tDigite um número inteiro!");
-            soma(calc, sc);
+            subtracao(calc, sc);
         }
         
         System.out.print("\n\tDigite o segundo numero: ");
@@ -134,7 +134,7 @@ public class Main {
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
             System.out.println("\n\tDigite um número inteiro!");
-            soma(calc, sc);
+            multiplicacao(calc, sc);
         }
         
         System.out.print("\n\tDigite o segundo numero: ");
@@ -157,14 +157,23 @@ public class Main {
 
     private static void divisao(Calculadora n, Scanner sc){
         Calculadora calc = new Calculadora();
-        System.out.print("Digite o primeiro numero: ");
+        System.out.print("\n\tDigite o primeiro numero: ");
         int nm1 = 0;
         try {
             nm1 = Integer.parseInt(sc.nextLine());
+            if (nm1 == 0) {
+                throw new ArithmeticException("\n\t>>>>>>>>>>>>> O número não pode ser divisível por 0");
+            }
+            
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
             System.out.println("\n\tDigite um número inteiro!");
-            soma(calc, sc);
+            divisao(calc, sc);
+
+        } 
+        catch(ArithmeticException ex){
+            System.out.println(ex.getMessage());
+            divisao(calc, sc);
         }
         
         System.out.print("\n\tDigite o segundo numero: ");
