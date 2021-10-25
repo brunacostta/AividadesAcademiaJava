@@ -33,7 +33,6 @@ public class Main {
             }
             
         } while (opcao != 0);
-
     }
 
     //O sistema deve possuir um tratamento de exceção durante a leitura dos dados para evitar que o usuário insira algo diferente de números inteiros tanto para as operação quanto para o menu.
@@ -169,15 +168,16 @@ public class Main {
             System.out.println(ex.getMessage());
             System.out.println("\n\tDigite um número inteiro!");
             divisao(calc, sc);
-
+            
         } 
         catch(ArithmeticException ex){
             System.out.println(ex.getMessage());
-            divisao(calc, sc);
+            System.out.println("\n\t>>>>>>>>>>>>> Digite novamente: ");
+            nm1 = Integer.parseInt(sc.nextLine());
         }
         
         System.out.print("\n\tDigite o segundo numero: ");
-        int nm2 = 0;
+        int nm2 = 1;
         boolean validador = false;
 
         do {
@@ -187,7 +187,7 @@ public class Main {
             } catch (NumberFormatException ex) {
                 System.out.println(ex.getMessage());
                 System.out.println("\n\tDigite um número inteiro!");         
-            }
+            } 
         } while (validador != true);
 
         int outro = calc.divisao(nm1, nm2);
