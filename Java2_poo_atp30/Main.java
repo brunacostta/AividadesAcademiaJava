@@ -157,9 +157,9 @@ public class Main {
     private static void divisao(Calculadora n, Scanner sc){
         Calculadora calc = new Calculadora();
         System.out.print("\n\tDigite o primeiro numero: ");
-        int nm1 = 0;
+        double nm1 = 0;
         try {
-            nm1 = Integer.parseInt(sc.nextLine());
+            nm1 = Double.parseDouble(sc.nextLine());
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
             System.out.println("\n\tDigite um número inteiro!");
@@ -167,12 +167,12 @@ public class Main {
         } 
        
         System.out.print("\n\tDigite o segundo numero: ");
-        int nm2 = 1;
+        double nm2 = 1;
         boolean validador = false;
 
         do {
             try {
-                nm2 = Integer.parseInt(sc.nextLine());
+                nm2 = Double.parseDouble(sc.nextLine());
                 validador = true;
                 if (nm2 == 0) {
                     throw new ArithmeticException("\n\t>>>>>>>>>>>>> O número não pode ser divisível por 0");
@@ -184,11 +184,11 @@ public class Main {
             catch(ArithmeticException ex){
                 System.out.println(ex.getMessage());
                 System.out.println("\n\t>>>>>>>>>>>>> Digite novamente: ");
-                nm2 = Integer.parseInt(sc.nextLine());
+                nm2 = Double.parseDouble(sc.nextLine());
             }
         } while (validador != true);
 
-        int outro = calc.divisao(nm1, nm2);
-        System.out.printf("\n\t<<<<< A divisão dos números é igual a: %s >>>>>", outro);
+        Double outro = calc.divisao(nm1, nm2);
+        System.out.printf("\n\t<<<<< A divisão dos números é igual a: %.2f >>>>>", outro);
     }
 }
