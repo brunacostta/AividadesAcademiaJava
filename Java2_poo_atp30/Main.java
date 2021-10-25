@@ -160,13 +160,10 @@ public class Main {
         int nm1 = 0;
         try {
             nm1 = Integer.parseInt(sc.nextLine());
-            
-            
         } catch (NumberFormatException ex) {
             System.out.println(ex.getMessage());
             System.out.println("\n\tDigite um número inteiro!");
             divisao(calc, sc);
-            
         } 
        
         System.out.print("\n\tDigite o segundo numero: ");
@@ -189,7 +186,6 @@ public class Main {
                 System.out.println("\n\t>>>>>>>>>>>>> Digite novamente: ");
                 nm2 = Integer.parseInt(sc.nextLine());
             }
-            
         } while (validador != true);
 
         int outro = calc.divisao(nm1, nm2);
